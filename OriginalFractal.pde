@@ -5,21 +5,21 @@ public void setup()
 
 public void draw()
 {
-  background(0);
+  background(255);
   noStroke();
-  myFractal(300, 300, 300);
+  myFractal(200, 200, 200);
 }
 
 public void myFractal(float x, float y, float d)
 {
   ellipse(x, y, d, d);
-  if (d > 10)
+  if (d > 20)
   {
     fill((int)(Math.random()*180),(int)(Math.random()*180),(int)(Math.random()*180));
-    myFractal(x+d/2, y, d/2);
-    myFractal(x-d/2, y, d/2);
-    myFractal(x, y+d/2, d/2);
-    myFractal(x, y-d/2, d/2);
+    myFractal(x+d/3, y, d/3);
+    myFractal(x-d/3, y, d/3);
+    myFractal(x, y+d/3, d/3);
+    myFractal(x, y-d/3, d/3);
   }
 
 }
